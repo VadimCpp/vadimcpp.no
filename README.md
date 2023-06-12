@@ -4,4 +4,12 @@
 
 ## Getting started
 
-Open solution with Microsoft Visual Studio and run it. That's all.
+Install dependencies:
+
+```bash
+npm install
+```
+
+Open solution with Microsoft Visual Studio and run it.
+
+That's all.

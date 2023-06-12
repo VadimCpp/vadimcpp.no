@@ -1,0 +1,39 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    /* Informational card BEM styles */
+
+    .info-card {
+        @apply container mx-auto pt-8
+    }
+
+    .info-card__block {
+        @apply max-w-md mx-auto bg-white overflow-hidden md:max-w-2xl
+    }
+
+    .info-card__flex {
+        @apply md:flex
+    }
+
+    .info-card__col-1 {
+        @apply md:flex-shrink-0
+    }
+
+    .info-card__col-2 {
+        @apply p-8
+    }
+
+    .info-card__avatar {
+        @apply h-48 object-cover md:w-48 mx-auto rounded-lg
+    }
+
+    .info-card__title {
+        @apply block mt-1 text-lg leading-tight font-medium text-black text-center md:text-left
+    }
+
+    .info-card__description {
+        @apply mt-2 text-gray-500 text-center md:text-left
+    }
+}
