@@ -2,9 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* BEM styles */
 @layer components {
-    /* Informational card BEM styles */
+    /* Header */
+    .header {
+        @apply bg-gray-800 text-white py-4
+    }
 
+    .header__container {
+        @apply container mx-auto flex justify-between items-center px-4
+    }
+
+    .header__title {
+        @apply text-2xl font-bold
+    }
+
+    /* Informational card */
     .info-card {
         @apply container mx-auto pt-8
     }
