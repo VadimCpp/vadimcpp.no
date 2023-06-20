@@ -87,4 +87,21 @@
     .project-card__link {
         @apply inline-block bg-transparent hover:bg-blue-500 text-blue-500 hover:text-white font-bold py-2 px-4 border border-blue-500 hover:border-transparent rounded
     }
+
+    /* Footer */
+    .footer {
+        @apply bg-gray-800 text-white pb-8 pt-6
+    }
+
+    .footer__container {
+        @apply max-w-md mx-auto overflow-hidden md:max-w-2xl px-4
+    }
+
+    .footer__title {
+        @apply text-xl font-bold
+    }
+
+    .footer__metrika {
+        @apply pr-8 pt-2
+    }
 }
