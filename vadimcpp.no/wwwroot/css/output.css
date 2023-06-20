@@ -862,8 +862,4 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
 /* BEM styles */
