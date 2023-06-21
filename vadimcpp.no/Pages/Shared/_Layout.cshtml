@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment WebHostEnvironment
+@{
+    string? footerTextFromConfig = Environment.GetEnvironmentVariable("FOOTER_TEXT");
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -20,7 +25,15 @@
 
     <footer class="footer">
         <div class="footer__container">
-            &copy; 2023 - vadimcpp.no - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <p>&copy; 2023 - vadimcpp.no - <a asp-area="" asp-page="/Privacy">Privacy</a></p>
+            @if (!string.IsNullOrEmpty(@footerTextFromConfig))
+            {
+                <p>@footerTextFromConfig</p>
+            }
+            else
+            {
+                <p>No additional footer text found in config</p>
+            }
         </div>
     </footer>
 
