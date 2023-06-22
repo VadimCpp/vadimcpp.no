@@ -90,7 +90,7 @@
 
     /* Footer */
     .footer {
-        @apply bg-gray-800 text-white pb-8 pt-6
+        @apply bg-gray-800  pb-8 pt-6
     }
 
     .footer__container {
@@ -98,10 +98,10 @@
     }
 
     .footer__title {
-        @apply text-xl font-bold
+        @apply text-white text-xl font-bold
     }
 
-    .footer__metrika {
-        @apply pr-8 pt-2
+    .footer__text {
+        @apply text-white pt-2
     }
 }

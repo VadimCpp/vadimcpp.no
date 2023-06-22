@@ -25,14 +25,15 @@
 
     <footer class="footer">
         <div class="footer__container">
-            <p>&copy; 2023 - vadimcpp.no - <a asp-area="" asp-page="/Privacy">Privacy</a></p>
+            <div class="footer__title">
+                Personvernregler
+            </div>
+            <div class="footer__text">
+                Nettstedet samler ikke inn noen personlig informasjon og tilbyr ingen tjenester.
+            </div>
             @if (!string.IsNullOrEmpty(@footerTextFromConfig))
             {
-                <p>@footerTextFromConfig</p>
-            }
-            else
-            {
-                <p>No additional footer text found in config</p>
+                <p class="footer__text">@footerTextFromConfig</p>
             }
         </div>
     </footer>

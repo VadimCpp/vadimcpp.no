@@ -835,8 +835,6 @@ video {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
   padding-bottom: 2rem;
   padding-top: 1.5rem;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .footer__container {
@@ -852,6 +850,20 @@ video {
   .footer__container {
     max-width: 42rem;
   }
+}
+
+.footer__title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.footer__text {
+  padding-top: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 /* BEM styles */
