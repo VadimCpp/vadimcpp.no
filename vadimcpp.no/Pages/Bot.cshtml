@@ -1,0 +1,64 @@
+﻿@page
+@{
+    ViewData["Title"] = "Bot-assistant";
+}
+
+<!-- Information card -->
+<section class="info-card">
+    <div class="info-card__block">
+        <div class="info-card__flex">
+            <div class="info-card__col-1">
+                <img class="info-card__avatar" src="~/images/vadym-kaninskyi.jpg" alt="Bot-assistant">
+            </div>
+            <div class="info-card__col-2">
+                <h2 class="info-card__title">Bot-assistant</h2>
+                <p class="info-card__description">
+                    Den personlige assistentbotten bruker ChatGPT-teknologi for å behandle meldinger fra brukerne. 
+                    Boten takler oppgavene sine godt i Telegram-chatter.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Article -->
+<section class="article" id="norsklett">
+    <div class="article__container">
+        <h2 class="article__title">Test</h2>
+        <p class="article__paragraph">
+            Trikk på test-knappen
+        </p>
+        <p class="article__paragraph article__paragraph--center">
+            <a class="article__link" id="btn-click-2" href="javascript:;">Test</a>
+        </p>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var myButton2 = document.getElementById("btn-click-2");
+        myButton2.addEventListener("click", function () {
+            fetch('api/gpt', {
+                method: 'POST',
+            })
+            .then(async response => {
+                // Handle the response from the Razor Page handler
+                if (response.ok) {
+                    // Handle successful response
+                    console.log('Model method triggered successfully!');
+
+                    let data = await response.json();
+
+                    console.log('Response:', data);
+                } else {
+                    // Handle error response
+                    console.error('Error triggering model method:', response.status);
+                }
+            })
+            .catch(error => {
+                // Handle any network or fetch API errors
+                console.error('Error triggering model method:', error);
+            });
+        });
+    });
+</script>
