@@ -21,44 +21,18 @@
     </div>
 </section>
 
-<!-- Article -->
-<section class="article" id="norsklett">
-    <div class="article__container">
-        <h2 class="article__title">Test</h2>
-        <p class="article__paragraph">
-            Trikk på test-knappen
+<section class="bot-testing bot-testing--gray">
+    <div class="bot-testing__container">
+        <h2 class="bot-testing__title">Prøv boten nå</h2>
+        <textarea id="test-area" class="bot-testing__textarea bot-testing__textarea--green h-24" disabled>Det blir et sporsmål</textarea>
+        <p class="bot-testing__button-wrap">
+            <button id="btn-test" href="javascript:;" class="bot-testing__button">
+                <img src="/img/gdg-loading.gif" id="js-test-ico" style="display: none;">
+                <span id="js-test-text">Test</span>
+            </button>
         </p>
-        <p class="article__paragraph article__paragraph--center">
-            <a class="article__link" id="btn-click-2" href="javascript:;">Test</a>
-        </p>
+        <textarea id="result-area" class="bot-testing__textarea h-64" disabled>Det blir resultaten</textarea>
     </div>
 </section>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var myButton2 = document.getElementById("btn-click-2");
-        myButton2.addEventListener("click", function () {
-            fetch('api/gpt', {
-                method: 'POST',
-            })
-            .then(async response => {
-                // Handle the response from the Razor Page handler
-                if (response.ok) {
-                    // Handle successful response
-                    console.log('Model method triggered successfully!');
-
-                    let data = await response.json();
-
-                    console.log('Response:', data);
-                } else {
-                    // Handle error response
-                    console.error('Error triggering model method:', response.status);
-                }
-            })
-            .catch(error => {
-                // Handle any network or fetch API errors
-                console.error('Error triggering model method:', error);
-            });
-        });
-    });
-</script>
+<script src="~/js/bot.js" asp-append-version="true"></script>
